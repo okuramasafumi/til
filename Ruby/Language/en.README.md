@@ -24,3 +24,7 @@ method_missing
 `warn` method call is caught by `method_missing`, but `send(:warn, 1)` call is not and instead calls `Kernel#warn`.
 
 It turned out that `send` can call private methods and methods in `Kernel` module are all private.
+
+## Method definition
+
+* When we define more than one method with the same name, the later-defined one will be used.
